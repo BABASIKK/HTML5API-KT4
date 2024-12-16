@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 API KT4</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>HTML5 API KT4</h1>
+    </header>
+    
+    <main>
+        <!-- Fake API Section -->
+        <section id="api-section">
+            <h2>Fake API</h2>
+            <label for="dataType">Выберите данные:</label>
+            <select id="dataType">
+                <option value="users">Пользователи</option>
+                <option value="posts">Посты</option>
+                <option value="comments">Комментарии</option>
+            </select>
+            <button id="loadData">Загрузить данные</button>
+            <div id="output" class="card"></div>
+        </section>
+        
+        <!-- Chat Section -->
+        <section id="chat-section">
+            <h2>Чат</h2>
+            <div class="chat-box">
+                <ul id="messages"></ul>
+            </div>
+            <input id="message" type="text" placeholder="Введите сообщение">
+            <button id="sendMessage">Отправить</button>
+        </section>
+        
+        <!-- SSE Updates Section -->
+        <section id="updates-section">
+            <h2>Обновления (SSE)</h2>
+            <div id="updates" class="card"></div>
+        </section>
+    </main>
+</body>
+<script src="app.js"></script>
+</html>
